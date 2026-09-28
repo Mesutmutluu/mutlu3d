@@ -1,0 +1,11 @@
+# root-level node_modules (npm workspaces hoists most deps here)
+/node_modules
+
+# unrelated project (Mutlu Makine website) sharing this parent folder —
+# not part of the Mutlu 3D monorepo, kept out of this repo
+/site
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.claude/settings.local.json

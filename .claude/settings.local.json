@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node node_modules/next/dist/bin/next typegen)",
+      "Bash(node ../../node_modules/next/dist/bin/next typegen)",
+      "WebFetch(domain:docs.expo.dev)"
+    ]
+  }
+}

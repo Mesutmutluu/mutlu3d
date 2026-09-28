@@ -1,0 +1,8 @@
+{
+  "name": "mutlu-3d",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
