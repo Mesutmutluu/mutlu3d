@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { forwardRef, useState } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import { WebView } from 'react-native-webview';
 
@@ -32,7 +32,10 @@ function buildHtml(src: string, alt: string): string {
 </html>`;
 }
 
-export default function ModelViewer({ src, alt }: { src: string; alt: string }) {
+const ModelViewer = forwardRef<View, { src: string; alt: string }>(function ModelViewer(
+  { src, alt },
+  ref
+) {
   const [progress, setProgress] = useState(0);
   const [loaded, setLoaded] = useState(false);
   const [loadError, setLoadError] = useState<string | null>(null);
@@ -42,7 +45,7 @@ export default function ModelViewer({ src, alt }: { src: string; alt: string }) 
     : src;
 
   return (
-    <View style={styles.container}>
+    <View ref={ref} collapsable={false} style={styles.container}>
       <WebView
         originWhitelist={['*']}
         source={{ html: buildHtml(proxiedSrc, alt) }}
@@ -70,7 +73,9 @@ export default function ModelViewer({ src, alt }: { src: string; alt: string }) 
       )}
     </View>
   );
-}
+});
+
+export default ModelViewer;
 
 const styles = StyleSheet.create({
   container: {

@@ -36,7 +36,13 @@
         }
       ],
       "@clerk/expo",
-      "expo-secure-store"
+      "expo-secure-store",
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Üretilen 3D modellerin görüntüsünü Fotoğraflar'a kaydetmek için izin gerekiyor."
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true,
