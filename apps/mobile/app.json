@@ -8,9 +8,11 @@
     "scheme": "mutlu3d",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "bundleIdentifier": "com.mutluu.mutlu3d"
     },
     "android": {
+      "package": "com.mutluu.mutlu3d",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -39,6 +41,13 @@
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
-    }
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "01a797d7-eef6-4563-bf58-4654dd2e730d"
+      }
+    },
+    "owner": "mutluu"
   }
 }
